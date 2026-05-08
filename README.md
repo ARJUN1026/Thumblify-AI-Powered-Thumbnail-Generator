@@ -46,10 +46,34 @@ graph TD
 - **Database**: MongoDB (Mongoose).
 - **AI Integration**: Groq SDK, Pollinations.ai API.
 
-## 🚀 Getting Started
+## 🌐 Deployment (Vercel)
+
+Thumblify is configured for seamless deployment on Vercel as a monorepo.
+
+### 1. Push to GitHub
+If you haven't already, push your code to GitHub.
+
+### 2. Import to Vercel
+- Connect your GitHub repo to Vercel.
+- Vercel will automatically detect the settings from `vercel.json`.
+
+### 3. Environment Variables
+Add the following variables in your Vercel Project Settings:
+- `MONGO_URI`: Your MongoDB connection string.
+- `JWT_SECRET`: A strong random string for auth.
+- `GROQ_API_KEY`: Your Groq API key.
+- `GROQ_MODEL`: `llama-3.3-70b-versatile`
+- `VITE_API_URL`: `/api` (Crucial for the frontend to find the backend)
+- `CLIENT_URL`: Your Vercel deployment URL.
+
+### 4. Build Settings
+- **Build Command**: `npm run build`
+- **Output Directory**: `client/dist`
+- **Install Command**: `npm run install-all`
+
+## 🚀 Getting Started Locally
 
 ### Prerequisites
-
 - Node.js (v18+)
 - MongoDB Atlas account
 - Groq API Key
@@ -58,7 +82,7 @@ graph TD
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/thumblify.git
+   git clone https://github.com/ARJUN1026/Thumblify-AI-Powered-Thumbnail-Generator.git
    cd thumblify
    ```
 
